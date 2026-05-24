@@ -3,6 +3,9 @@ import { Home } from './home/home';
 import { Cats } from './cats/cats';
 import { Dogs } from './dogs/dogs';
 import { Navbar } from './navbar/navbar';
+import { DogDetail } from './dog-detail/dog-detail';
+import { CatDetail } from './cat-detail/cat-detail';
+
 
 export const routes: Routes = [
     { path: '', component: Home },
@@ -10,5 +13,7 @@ export const routes: Routes = [
     { path: 'cats', component: Cats },
     { path: 'home', component: Home },
     { path: 'navbar', component: Navbar },
+    { path: 'dogs/:id', component: DogDetail },
+    { path: 'cats/:id', component: CatDetail },
     { path: '**', redirectTo: '' }
 ];

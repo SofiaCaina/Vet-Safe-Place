@@ -5,14 +5,17 @@
     <div class="col">
       <div class="card h-100 shadow-sm">
         <div class="card-body">
-          <h5 class="card-title">{{ dog.name }}</h5>
+          <h5 class="card-title">{{ dog.name }}</h5> <!-- Interpolacion de datos -->
           <p class="card-text text-muted">{{ dog.description }}</p>
           <span class="badge bg-primary">{{ dog.age }} años</span>
         </div>
         <div class="card-footer">
-          <button class="btn btn-outline-primary w-100">
+          <!-- <button class="btn btn-outline-primary w-100">
             Quiero adoptarlo
-          </button>
+          </button> -->
+          <a [routerLink]="['/dogs', dog.id]" class="btn btn-outline-warning w-100">
+            Ver mas 🐶
+          </a>
         </div>
       </div>
     </div>
